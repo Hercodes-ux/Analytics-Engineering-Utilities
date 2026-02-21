@@ -59,5 +59,4 @@ if __name__ == "__main__" :
     #Test: Lambda Transformation
     print("\n[Step 3] Categorized Performance Tiers:")
     final_df = wrangler.apply_custom_logic('Sales')
-
     print(final_df[['Store', 'Product', 'Sales', 'Performance_Tier']])

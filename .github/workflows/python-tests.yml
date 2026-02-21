@@ -1,0 +1,19 @@
+name: Python Unit Tests
+
+on: [push] # This means: Run whenever I push code
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    - name: Install dependencies
+      run: |
+        pip install pandas pytest
+    - name: Run tests
+      run: |
+        pytest tests/
